@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.TdsLib.Packets;
 
-namespace Microsoft.TdsLib
+namespace Microsoft.TdsLib.IO.Connection
 {
     /// <summary>
     /// Tds client connection options.

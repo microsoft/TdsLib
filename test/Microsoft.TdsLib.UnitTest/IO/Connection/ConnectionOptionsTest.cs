@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.TdsLib.IO.Connection;
+using System;
 using Xunit;
 
 namespace Microsoft.TdsLib.UnitTest.IO.Connection

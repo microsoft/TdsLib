@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.TdsLib.Buffer;
+using Microsoft.TdsLib.IO.Connection;
 using Microsoft.TdsLib.Messages;
 using Microsoft.TdsLib.Tokens.Done;
 using Microsoft.TdsLib.Tokens.DoneInProc;
