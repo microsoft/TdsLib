@@ -29,4 +29,4 @@ jobs:
        name: dotnet-results-6.0.x
        path: TestResults-6.0.x
        # Use always() to always run this step to publish test results when there are test failures
-       if: ${{ always() }}
+       if: always()
