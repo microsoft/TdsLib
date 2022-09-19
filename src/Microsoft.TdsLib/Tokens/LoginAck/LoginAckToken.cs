@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.LoginAck
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.LoginAck
 {
     /// <summary>
     /// Login7 response.

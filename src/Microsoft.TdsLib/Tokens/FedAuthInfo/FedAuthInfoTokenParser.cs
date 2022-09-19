@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.TdsLib.Buffer;
 

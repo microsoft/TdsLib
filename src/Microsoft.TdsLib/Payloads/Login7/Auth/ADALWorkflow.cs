@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Payloads.Login7.Auth
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Payloads.Login7.Auth
 {
     /// <summary>
     /// Active Directory Authentication Library (ADAL) workflow.

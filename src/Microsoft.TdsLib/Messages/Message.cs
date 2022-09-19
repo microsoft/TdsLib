@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using System.Collections.Generic;
 using Microsoft.TdsLib.Buffer;
 using Microsoft.TdsLib.Packets;
 using Microsoft.TdsLib.Payloads;

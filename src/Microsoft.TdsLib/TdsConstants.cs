@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib
 {
     /// <summary>
     /// Default TDS values.

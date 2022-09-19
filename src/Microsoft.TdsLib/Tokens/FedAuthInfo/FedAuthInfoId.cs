@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.FedAuthInfo
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.FedAuthInfo
 {
     /// <summary>
     /// Federate authentication information identifier.

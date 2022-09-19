@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.EnvChange
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.EnvChange
 {
     /// <summary>
     /// Packet size change.
