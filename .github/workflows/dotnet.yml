@@ -28,3 +28,4 @@ jobs:
       with:
        name: dotnet-results-6.0.x
        path: TestResults-6.0.x
+       if: ${{ always() }}
