@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.ReturnStatus
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.ReturnStatus
 {
     /// <summary>
     /// Return status of an RPC or TSQL exec query.

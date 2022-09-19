@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.Done
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.Done
 {
     /// <summary>
     /// Indicates the completion status of a SQL statement.

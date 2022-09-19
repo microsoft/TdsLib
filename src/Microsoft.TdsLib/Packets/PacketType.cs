@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Packets
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Packets
 {
     /// <summary>
     /// Type of <see cref="Packet"/>.

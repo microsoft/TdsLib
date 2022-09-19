@@ -1,4 +1,7 @@
-﻿using Microsoft.TdsLib.IO.Connection;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using Microsoft.TdsLib.IO.Connection;
 using System;
 using Xunit;
 

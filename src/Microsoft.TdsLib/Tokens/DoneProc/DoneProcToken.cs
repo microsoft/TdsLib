@@ -1,4 +1,7 @@
-﻿using Microsoft.TdsLib.Tokens.Done;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using Microsoft.TdsLib.Tokens.Done;
 
 namespace Microsoft.TdsLib.Tokens.DoneProc
 {

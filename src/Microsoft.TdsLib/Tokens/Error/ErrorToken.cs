@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens.Error
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens.Error
 {
     /// <summary>
     /// Error message.

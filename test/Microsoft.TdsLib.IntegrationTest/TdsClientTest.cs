@@ -1,4 +1,7 @@
-﻿using Moq;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using Moq;
 using System;
 using System.Threading.Tasks;
 using Microsoft.TdsLib.Buffer;

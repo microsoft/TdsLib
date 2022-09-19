@@ -1,4 +1,7 @@
-﻿namespace Microsoft.TdsLib.Tokens
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace Microsoft.TdsLib.Tokens
 {
     /// <summary>
     /// Token type.
