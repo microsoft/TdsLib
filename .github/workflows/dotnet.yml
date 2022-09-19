@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
        name: dotnet-results-6.0.x
-       path: ./TestResults-6.0.x/TestResults-6.0.x-${{ github.event.repository.updated_at}}
+       path: ./TestResults-6.0.x/*.trx
