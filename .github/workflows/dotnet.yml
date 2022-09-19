@@ -32,3 +32,10 @@ jobs:
       with:
        name: dotnet-results-6.0.x
        path: ./TestResults-6.0.x/
+       
+    - uses: dorny/test-reporter@v1
+      with:
+        artifact: dotnet-results-6.0.x
+        name: Test Report
+        path: ./TestResults-6.0.x/
+        reporter: dotnet-trx
