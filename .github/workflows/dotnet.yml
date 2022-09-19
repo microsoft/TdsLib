@@ -25,10 +25,10 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build --verbosity normal --logger "trx;LogFilePath=./TestResults-6.0.x/TestResults-6.0.x-${{github.event.repository.updated_at}}.trx" --results-directory ./TestResults-6.0.x
+      run: dotnet test --no-build --verbosity normal --logger "trx;LogFilePath=./TestResults-6.0.x/TestResults-6.0.x-*.trx" --results-directory ./TestResults-6.0.x
       
     - name: Upload dotnet test results
       uses: actions/upload-artifact@v3
       with:
        name: dotnet-results-6.0.x
-       path: ./TestResults-6.0.x/*.trx
+       path: ./TestResults-6.0.x/
