@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
-        <id>Microsoft.TdsLib</id>
+        <id>Microsoft.Data.TdsLib</id>
         <version>$version$</version>
         <title>Open implementation of the TDS protocol in C#.</title>
         <authors>Microsoft</authors>
@@ -17,7 +17,7 @@
     </metadata>                 
     <files>
         <file src="LICENSE.txt" target="" />
-        <file src="src\Microsoft.TdsLib\bin\$configuration$\netstandard2.0\*.dll" target="lib\netstandard2.0" />
-        <file src="src\Microsoft.TdsLib\bin\$configuration$\netstandard2.0\*.xml" target="lib\netstandard2.0" />
+        <file src="src\Microsoft.Data.TdsLib\bin\$configuration$\netstandard2.0\*.dll" target="lib\netstandard2.0" />
+        <file src="src\Microsoft.Data.TdsLib\bin\$configuration$\netstandard2.0\*.xml" target="lib\netstandard2.0" />
     </files>
 </package>
