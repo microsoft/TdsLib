@@ -6,6 +6,8 @@
         <title>Open implementation of the TDS protocol in C#.</title>
         <authors>Microsoft</authors>
         <icon>icon.png</icon>
+        <projectUrl>https://github.com/microsoft/TdsLib</projectUrl>
+        <repository type="git" url="https://github.com/microsoft/TdsLib.git" branch="main" />
         <license type="expression">MIT</license>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>TdsLib is an open implementation of the TDS protocol (version 7.4) in managed C# code.</description>
