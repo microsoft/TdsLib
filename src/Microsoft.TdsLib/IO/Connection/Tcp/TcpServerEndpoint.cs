@@ -7,9 +7,9 @@ using System.Collections.Generic;
 namespace Microsoft.TdsLib.IO.Connection.Tcp
 {
     /// <summary>
-    /// Server endpoint information.
+    /// TCP server endpoint information.
     /// </summary>
-    public class ServerEndpoint
+    public class TcpServerEndpoint : IEquatable<TcpServerEndpoint>
     {
         /// <summary>
         /// The hostname of the server endpoint.
@@ -26,9 +26,15 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// </summary>
         /// <param name="hostname">The server endpoint hostname.</param>
         /// <param name="port">The server endpoint port.</param>
-        public ServerEndpoint(string hostname, int port)
+        public TcpServerEndpoint(string hostname, int port)
         {
             Hostname = hostname ?? throw new ArgumentNullException(nameof(hostname));
+
+            if (port < ushort.MinValue || port > ushort.MaxValue)
+            {
+                throw new ArgumentOutOfRangeException(nameof(port), $"Specified port is invalid, outside valid range [{ushort.MinValue}-{ushort.MaxValue}]");
+            }
+
             Port = port;
         }
 
@@ -39,9 +45,15 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// <returns>True if the objects are equal, False otherwise.</returns>
         public override bool Equals(object obj)
         {
-            return obj is ServerEndpoint endpoint &&
-                   Hostname == endpoint.Hostname &&
-                   Port == endpoint.Port;
+            return Equals(obj as TcpServerEndpoint);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(TcpServerEndpoint other)
+        {
+            return other != null && 
+                Hostname == other.Hostname && 
+                Port == other.Port;
         }
 
         /// <summary>
@@ -62,9 +74,10 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// <param name="left">The left operand.</param>
         /// <param name="right">The right operand.</param>
         /// <returns>True if the operands are equal, False otherwise.</returns>
-        public static bool operator ==(ServerEndpoint left, ServerEndpoint right)
+        public static bool operator ==(TcpServerEndpoint left, TcpServerEndpoint right)
         {
-            return left.Equals(right);
+            return (left is null && right is null) || 
+                !(left is null) && left.Equals(right);
         }
 
         /// <summary>
@@ -73,7 +86,7 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// <param name="left">The left operand.</param>
         /// <param name="right">The right operand.</param>
         /// <returns>True if the operands are not equal, False otherwise.</returns>
-        public static bool operator !=(ServerEndpoint left, ServerEndpoint right)
+        public static bool operator !=(TcpServerEndpoint left, TcpServerEndpoint right)
         {
             return !(left == right);
         }
@@ -84,7 +97,7 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// <returns>Human readable string representation.</returns>
         public override string ToString()
         {
-            return $"{nameof(ServerEndpoint)}[{nameof(Hostname)}={Hostname}, {nameof(Port)}={Port}]";
+            return $"{nameof(TcpServerEndpoint)}[{nameof(Hostname)}={Hostname}, {nameof(Port)}={Port}]";
         }
     }
 }

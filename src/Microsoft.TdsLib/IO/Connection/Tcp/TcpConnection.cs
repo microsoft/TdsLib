@@ -18,7 +18,7 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
     public sealed class TcpConnection : IConnection
     {
         private readonly Socket socket;
-        private readonly ServerEndpoint endpoint;
+        private readonly TcpServerEndpoint endpoint;
         private Stream stream;
 
         /// <inheritdoc/>
@@ -64,7 +64,7 @@ namespace Microsoft.TdsLib.IO.Connection.Tcp
         /// <exception cref="IOException">If the socket is not valid for IO.</exception>
         /// <exception cref="OverflowException">If the timeout option values are invalid.</exception>
         /// <exception cref="ArgumentOutOfRangeException">If the timeout option values are invalid.</exception>
-        public TcpConnection(TcpConnectionOptions options, ServerEndpoint serverEndpoint)
+        public TcpConnection(TcpConnectionOptions options, TcpServerEndpoint serverEndpoint)
         {
             endpoint = serverEndpoint ?? throw new ArgumentNullException(nameof(serverEndpoint));
             Options = options ?? throw new ArgumentNullException(nameof(options));
