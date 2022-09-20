@@ -34,22 +34,22 @@ namespace Microsoft.TdsLib
         public TokenStreamHandler TokenStreamHandler { get; }
 
         /// <summary>
-        /// Creates a new TDS Client and establishes a Tcp connection to the endpoint specified by the <see cref="ServerEndpoint"/> using default connection options.
+        /// Creates a new TDS Client and establishes a Tcp connection to the endpoint specified by the <see cref="TcpServerEndpoint"/> using default connection options.
         /// </summary>
         /// <param name="serverEndpoint">The database server endpoint.</param>
         /// <exception cref="IOException">If any IO error occurs.</exception>
-        public TdsClient(ServerEndpoint serverEndpoint)
+        public TdsClient(TcpServerEndpoint serverEndpoint)
             : this(new TcpConnectionOptions(), serverEndpoint)
         {
         }
 
         /// <summary>
-        /// Creates a new TDS Client and establishes a Tcp connection to the endpoint specified by the <see cref="ServerEndpoint"/> using the specified <see cref="ConnectionOptions"/>.
+        /// Creates a new TDS Client and establishes a Tcp connection to the endpoint specified by the <see cref="TcpServerEndpoint"/> using the specified <see cref="ConnectionOptions"/>.
         /// </summary>
         /// <param name="options">The connection options.</param>
         /// <param name="serverEndpoint">The database server endpoint.</param>
         /// <exception cref="IOException">If any IO error occurs.</exception>
-        public TdsClient(TcpConnectionOptions options, ServerEndpoint serverEndpoint)
+        public TdsClient(TcpConnectionOptions options, TcpServerEndpoint serverEndpoint)
             : this(new TcpConnection(options, serverEndpoint))
         {
         }
@@ -84,7 +84,7 @@ namespace Microsoft.TdsLib
         /// <param name="options">Tcp connection options.</param>
         /// <param name="serverEndpoint">The new database server endpoint.</param>
         /// <exception cref="IOException">If any IO error occurs.</exception>
-        public void ReEstablishConnection(TcpConnectionOptions options, ServerEndpoint serverEndpoint)
+        public void ReEstablishConnection(TcpConnectionOptions options, TcpServerEndpoint serverEndpoint)
         {
             Connection.Dispose();
             Connection = new TcpConnection(options, serverEndpoint);

@@ -33,7 +33,7 @@ namespace Microsoft.TdsLib.Payloads
         /// <returns>Human readable string representation.</returns>
         public override string ToString()
         {
-            return $"RawPayload[Buffer={Buffer}]";
+            return $"{nameof(RawPayload)}[{nameof(Buffer)}={Buffer}]";
         }
 
     }

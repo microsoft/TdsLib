@@ -78,7 +78,7 @@ namespace Microsoft.TdsLib.IntegrationTest
 
             #region Initialize data
 
-            ServerEndpoint dbServerEndpoint = new ServerEndpoint("azuresql-test.database.windows.net", 1433);
+            TcpServerEndpoint dbServerEndpoint = new TcpServerEndpoint("azuresql-test.database.windows.net", 1433);
 
             Message preLoginMessage = new Message(PacketType.PreLogin) { Payload = new PreLoginPayload(true) };
 
