@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TdsLib", "src\Microsoft.TdsLib\Microsoft.TdsLib.csproj", "{B7B7FFFF-9D77-4917-ACBF-883C1AD11CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Data.TdsLib", "src\Microsoft.Data.TdsLib\Microsoft.Data.TdsLib.csproj", "{B7B7FFFF-9D77-4917-ACBF-883C1AD11CA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TdsLib.UnitTest", "test\Microsoft.TdsLib.UnitTest\Microsoft.TdsLib.UnitTest.csproj", "{89F38A31-5CAF-4228-A730-FB321141C8D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Data.TdsLib.UnitTest", "test\Microsoft.Data.TdsLib.UnitTest\Microsoft.Data.TdsLib.UnitTest.csproj", "{89F38A31-5CAF-4228-A730-FB321141C8D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.TdsLib.IntegrationTest", "test\Microsoft.TdsLib.IntegrationTest\Microsoft.TdsLib.IntegrationTest.csproj", "{BA6F7B30-3BE3-45AE-BB6D-B4848CCC864C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Data.TdsLib.IntegrationTest", "test\Microsoft.Data.TdsLib.IntegrationTest\Microsoft.Data.TdsLib.IntegrationTest.csproj", "{BA6F7B30-3BE3-45AE-BB6D-B4848CCC864C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4E87B62-B068-475C-8CDD-774676EB9F64}"
 EndProject
