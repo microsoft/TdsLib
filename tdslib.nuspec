@@ -16,7 +16,7 @@
         </dependencies>
     </metadata>                 
     <files>
-        <file src="LICENSE" target="" />
+        <file src="LICENS*" target="" />
         <file src="src\Microsoft.TdsLib\bin\$configuration$\netstandard2.0\*.dll" target="lib\netstandard2.0" />
         <file src="src\Microsoft.TdsLib\bin\$configuration$\netstandard2.0\*.xml" target="lib\netstandard2.0" />
     </files>
