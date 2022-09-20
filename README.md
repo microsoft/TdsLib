@@ -76,7 +76,6 @@ Message login7Message = new Message(PacketType.Login7) { Payload = login7Payload
 await client.MessageHandler.SendMessage(login7Message);
 
 // Receive Login response tokens
-
 await client.TokenStreamHandler.ReceiveTokensAsync(tokenEvent =>
 {
     if (tokenEvent.Token is ErrorToken errorToken)
