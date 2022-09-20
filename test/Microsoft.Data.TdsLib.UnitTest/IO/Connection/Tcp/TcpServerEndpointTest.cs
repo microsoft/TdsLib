@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Microsoft.TdsLib.IO.Connection.Tcp;
+using Microsoft.Data.TdsLib.IO.Connection.Tcp;
 using System;
 using Xunit;
 
-namespace Microsoft.TdsLib.UnitTest.IO.Connection.Tcp
+namespace Microsoft.Data.TdsLib.UnitTest.IO.Connection.Tcp
 {
     public class TcpServerEndpointTest
     {
