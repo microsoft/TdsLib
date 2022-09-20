@@ -40,7 +40,9 @@ namespace Microsoft.TdsLib.UnitTest.IO.Connection.Tcp
             });
             DateTime endTime = DateTime.Now;
 
-            Assert.True(socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
+            bool isError = socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut;
+
+            Assert.True(isError);
             Assert.True(endTime - startTime < TimeSpan.FromSeconds(timeoutSeconds * 2));
         }
 
@@ -54,7 +56,8 @@ namespace Microsoft.TdsLib.UnitTest.IO.Connection.Tcp
             });
             DateTime endTime = DateTime.Now;
 
-            Assert.True(socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
+            bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
+            Assert.True(isError);
         }
 
         [Fact]
