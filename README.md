@@ -13,7 +13,7 @@ This library is mainly used for probing and for diagnosing TDS connections but c
 
 ```text
 src
-  Microsoft.Data.TdsLib - TdsLib code
+  Microsoft.Data.Tools.TdsLib - TdsLib code
     Buffer - Buffer class to handle type conversion
     IO - Connection related classes
     Messages - Logical message format used to generate Packets to be sent to SQL Server
@@ -22,8 +22,8 @@ src
     Tokens - Tokens that can be received from SQL server
 
 test
-  Microsoft.Data.TdsLib.UnitTest - Unit tests
-  Microsoft.Data.TdsLib.IntegrationTest - Integration tests
+  Microsoft.Data.Tools.TdsLib.UnitTest - Unit tests
+  Microsoft.Data.Tools.TdsLib.IntegrationTest - Integration tests
 ```
 
 ## Example
@@ -31,13 +31,13 @@ test
 ### Establish a TDS connection and login to a SQL server
 
 ```csharp
-using Microsoft.Data.TdsLib;
-using Microsoft.Data.TdsLib.IO.Connection.Tcp;
-using Microsoft.Data.TdsLib.Messages;
-using Microsoft.Data.TdsLib.Packets;
-using Microsoft.Data.TdsLib.Payloads.Login7;
-using Microsoft.Data.TdsLib.Payloads.PreLogin;
-using Microsoft.Data.TdsLib.Tokens.Error;
+using Microsoft.Data.Tools.TdsLib;
+using Microsoft.Data.Tools.TdsLib.IO.Connection.Tcp;
+using Microsoft.Data.Tools.TdsLib.Messages;
+using Microsoft.Data.Tools.TdsLib.Packets;
+using Microsoft.Data.Tools.TdsLib.Payloads.Login7;
+using Microsoft.Data.Tools.TdsLib.Payloads.PreLogin;
+using Microsoft.Data.Tools.TdsLib.Tokens.Error;
 
 string hostname = "sqlserver.contoso.net";
 int port = 1433;
