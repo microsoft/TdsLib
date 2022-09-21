@@ -45,7 +45,7 @@ using Microsoft.Data.Tools.TdsLib.Tokens.Error;
 string hostname = "sqlserver.contoso.net";
 int port = 1433;
 
-using TdsClient client = new TdsClient(new ServerEndpoint(hostname, port));
+using TdsClient client = new TdsClient(new TcpServerEndpoint(hostname, port));
 
 // Send PreLogin message
 await client.MessageHandler.SendMessage(new Message(PacketType.PreLogin)
