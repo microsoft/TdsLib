@@ -1,5 +1,8 @@
 # TdsLib
 
+[![Nuget](https://img.shields.io/nuget/v/Microsoft.Data.Tools.TdsLib)](https://www.nuget.org/packages/Microsoft.Data.Tools.TdsLib)
+
+
 This repository contains an open implementation of the [TDS protocol](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/) (version 7.4) in managed C# code. It is not a full implementation, current support is focused on the login steps and some generic TDS features. It does not support _normal_ data streams or T-SQL commands.
 
 This library is mainly used for probing and for diagnosing TDS connections but can be used to manually construct and handle any step of a TDS connection. It can also be used to mock TDS clients.
