@@ -40,6 +40,8 @@ namespace Microsoft.Data.Tools.TdsLib.UnitTest.IO.Connection.Tcp
             });
             DateTime endTime = DateTime.Now;
 
+            Console.WriteLine($"socketException.ErrorCode: {socketException.ErrorCode}");
+
             bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
 
             Assert.True(isError);
