@@ -26,6 +26,7 @@ namespace Microsoft.Data.Tools.TdsLib.UnitTest.IO.Connection.Tcp
         private const string NonRoutableIP = "10.255.255.1";
         private const int Port = 1443;
         private const int ETimedOutErrorCode = 110;
+        private const int ETimedOutErrorCodeLinux = 60;
 
         [Theory]
         [InlineData(1)]
@@ -40,7 +41,7 @@ namespace Microsoft.Data.Tools.TdsLib.UnitTest.IO.Connection.Tcp
             });
             DateTime endTime = DateTime.Now;
 
-            bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
+            bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == ETimedOutErrorCodeLinux || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
 
             Assert.True(isError);
             Assert.True(endTime - startTime < TimeSpan.FromSeconds(timeoutSeconds * 2));
@@ -56,7 +57,7 @@ namespace Microsoft.Data.Tools.TdsLib.UnitTest.IO.Connection.Tcp
             });
             DateTime endTime = DateTime.Now;
 
-            bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
+            bool isError = (socketException.ErrorCode == ETimedOutErrorCode || socketException.ErrorCode == ETimedOutErrorCodeLinux || socketException.ErrorCode == (int)SocketError.NetworkUnreachable || socketException.ErrorCode == (int)SocketError.TimedOut);
             
             Assert.True(isError);
         }

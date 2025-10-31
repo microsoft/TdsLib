@@ -9,12 +9,17 @@ on:
 jobs:
   build-test:
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
         
@@ -28,8 +33,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal --logger trx --results-directory ./
       
     - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: success() || failure() 
       with:
-        name: dotnet-results-6.0.x
+        name: dotnet-results-6.0.x-${{ matrix.os }}
         path: ./*.trx

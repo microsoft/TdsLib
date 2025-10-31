@@ -7,10 +7,20 @@ on:
 jobs:
   report:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      checks: write
     steps:
     - uses: dorny/test-reporter@v1
       with:
-        artifact: dotnet-results-6.0.x
-        name: Test Report
+        artifact: dotnet-results-6.0.x-windows-latest
+        name: Test Report (Windows)
+        path: ./*.trx
+        reporter: dotnet-trx
+    - uses: dorny/test-reporter@v1
+      with:
+        artifact: dotnet-results-6.0.x-macos-latest
+        name: Test Report (macOS)
         path: ./*.trx
         reporter: dotnet-trx
