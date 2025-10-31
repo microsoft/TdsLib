@@ -10,6 +10,8 @@ jobs:
   build-test:
 
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         os: [windows-latest, macos-latest]
