@@ -9,7 +9,10 @@ on:
 jobs:
   build-test:
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v3
@@ -31,5 +34,5 @@ jobs:
       uses: actions/upload-artifact@v3
       if: success() || failure() 
       with:
-        name: dotnet-results-6.0.x
+        name: dotnet-results-6.0.x-${{ matrix.os }}
         path: ./*.trx
