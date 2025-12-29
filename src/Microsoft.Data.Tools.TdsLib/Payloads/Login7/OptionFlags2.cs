@@ -144,11 +144,11 @@ namespace Microsoft.Data.Tools.TdsLib.Payloads.Login7
             {
                 if (value == OptionOdbc.Off)
                 {
-                    Value &= byte.MaxValue - OptionInitLangBitIndex;
+                    Value &= byte.MaxValue - OptionOdbcBitIndex;
                 }
                 else
                 {
-                    Value |= OptionInitLangBitIndex;
+                    Value |= OptionOdbcBitIndex;
                 }
             }
         }
