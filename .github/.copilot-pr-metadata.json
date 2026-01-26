@@ -1,4 +1,0 @@
-{
-  "title": "feat: Add GitHub Copilot instructions",
-  "description": "## Summary\n\nAdds comprehensive GitHub Copilot instructions for the TdsLib repository, a C# implementation of the TDS protocol.\n\n## Changes\n\n- Added project overview and documentation links\n- Documented tech stack (.NET Standard 2.0, xUnit, Moq)\n- Detailed repository structure with architectural layers table\n- Added coding guidelines covering naming conventions, file naming, code style, and async patterns\n- Documented error handling patterns and how to implement new tokens/payloads\n- Added testing requirements with xUnit conventions and example commands\n- Included build and development instructions\n- Added best practices section with always/never guidelines\n- Specified conventional commit message format"
-}
