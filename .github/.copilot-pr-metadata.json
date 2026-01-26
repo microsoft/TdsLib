@@ -1,0 +1,4 @@
+{
+  "title": "feat: Add GitHub Copilot instructions",
+  "description": "## Summary\n\nAdds comprehensive GitHub Copilot instructions for the TdsLib repository, a C# TDS protocol implementation library.\n\n## Changes\n\n- Added project overview and architecture documentation\n- Documented repository structure with layer explanations (Buffer, IO, Packet, Message, Payload, Token)\n- Defined coding conventions (naming, file organization, async patterns)\n- Added XML documentation requirements for public APIs\n- Included testing guidelines with xUnit and Moq patterns\n- Added build commands and CI/CD workflow notes\n- Documented best practices and patterns for adding new tokens/payloads"
+}
